@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galaxy Learning Computer - Certificate Verification</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-content">
+                <h1>🎓 Galaxy Learning Computer</h1>
+                <p>Certificate Verification System</p>
+            </div>
+        </header>
+
+        <main>
+            <section class="verification-section">
+                <div class="card">
+                    <h2>Verify Your Certificate</h2>
+                    <p class="subtitle">Enter your certificate number to view details</p>
+                    
+                    <form id="certificateForm">
+                        <div class="form-group">
+                            <label for="certificateNumber">Certificate Number:</label>
+                            <input 
+                                type="text" 
+                                id="certificateNumber" 
+                                placeholder="e.g., GLC-2024-001234"
+                                required
+                            >
+                            <span class="helper-text">Format: GLC-YYYY-XXXXXX</span>
+                        </div>
+                        <button type="submit" class="btn-primary">Verify Certificate</button>
+                    </form>
+
+                    <div id="loadingSpinner" class="loading hidden">
+                        <div class="spinner"></div>
+                        <p>Verifying...</p>
+                    </div>
+
+                    <div id="errorMessage" class="error-message hidden"></div>
+                </div>
+            </section>
+
+            <section id="resultsSection" class="results-section hidden">
+                <div class="card certificate-details">
+                    <div class="cert-header">
+                        <div class="cert-status">
+                            <span id="statusBadge" class="status-badge"></span>
+                            <h3 id="certificateName"></h3>
+                        </div>
+                        <button class="btn-close" onclick="goBack()">×</button>
+                    </div>
+
+                    <div class="details-grid">
+                        <div class="detail-item">
+                            <label>Certificate Number</label>
+                            <p id="detailCertNumber" class="mono"></p>
+                        </div>
+
+                        <div class="detail-item">
+                            <label>Student Name</label>
+                            <p id="detailStudentName"></p>
+                        </div>
+
+                        <div class="detail-item">
+                            <label>Course/Program</label>
+                            <p id="detailCourse"></p>
+                        </div>
+
+                        <div class="detail-item">
+                            <label>Issue Date</label>
+                            <p id="detailIssueDate"></p>
+                        </div>
+
+                        <div class="detail-item">
+                            <label>Expiry Date</label>
+                            <p id="detailExpiryDate"></p>
+                        </div>
+
+                        <div class="detail-item">
+                            <label>Grade/Score</label>
+                            <p id="detailGrade"></p>
+                        </div>
+
+                        <div class="detail-item full-width">
+                            <label>Description</label>
+                            <p id="detailDescription"></p>
+                        </div>
+
+                        <div class="detail-item full-width">
+                            <label>Verified By</label>
+                            <p id="detailVerifiedBy"></p>
+                        </div>
+                    </div>
+
+                    <div class="cert-footer">
+                        <p class="verification-time">Verified on: <span id="verificationTime"></span></p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2026 Galaxy Learning Computer Institute. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
