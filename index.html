@@ -10,13 +10,17 @@
     <div class="container">
         <header>
             <div class="header-content">
-                <h1>🎓 Galaxy Learning Computer</h1>
-                <p>Certificate Verification System</p>
+                <div class="header-title">
+                    <h1>🎓 Galaxy Learning Computer</h1>
+                    <p>Certificate Verification System</p>
+                </div>
+                <button id="themeToggle" class="theme-toggle" title="Toggle Dark Mode">🌙</button>
             </div>
         </header>
 
         <main>
-            <section class="verification-section">
+            <!-- VERIFICATION SECTION -->
+            <section id="verificationSection" class="verification-section">
                 <div class="card">
                     <h2>Verify Your Certificate</h2>
                     <p class="subtitle">Enter your certificate number to view details</p>
@@ -44,6 +48,7 @@
                 </div>
             </section>
 
+            <!-- RESULTS DETAILS SECTION -->
             <section id="resultsSection" class="results-section hidden">
                 <div class="card certificate-details">
                     <div class="cert-header">
@@ -51,7 +56,10 @@
                             <span id="statusBadge" class="status-badge"></span>
                             <h3 id="certificateName"></h3>
                         </div>
-                        <button class="btn-close" onclick="goBack()">×</button>
+                        <div class="cert-actions">
+                            <button class="btn-secondary" onclick="downloadCertificatePDF()">📥 Download</button>
+                            <button class="btn-close" onclick="goBack()">×</button>
+                        </div>
                     </div>
 
                     <div class="details-grid">
@@ -98,6 +106,83 @@
 
                     <div class="cert-footer">
                         <p class="verification-time">Verified on: <span id="verificationTime"></span></p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- BROWSE ALL CERTIFICATES SECTION -->
+            <section class="browse-section">
+                <div class="card">
+                    <h2>Browse All Certificates</h2>
+                    <p class="subtitle">Search, filter, and view all certificates</p>
+                    
+                    <!-- Filter Controls -->
+                    <div class="filter-controls">
+                        <div class="filter-group">
+                            <label for="filterStatus">Status:</label>
+                            <select id="filterStatus">
+                                <option value="">All Status</option>
+                                <option value="valid">Valid</option>
+                                <option value="expired">Expired</option>
+                            </select>
+                        </div>
+
+                        <div class="filter-group">
+                            <label for="filterCourse">Course:</label>
+                            <select id="filterCourse">
+                                <option value="">All Courses</option>
+                                <option value="Advanced Python Programming">Advanced Python Programming</option>
+                                <option value="Web Design Fundamentals">Web Design Fundamentals</option>
+                                <option value="Data Science & Machine Learning">Data Science & Machine Learning</option>
+                                <option value="Cloud Computing with AWS">Cloud Computing with AWS</option>
+                                <option value="Mobile App Development">Mobile App Development</option>
+                            </select>
+                        </div>
+
+                        <div class="filter-group">
+                            <label for="filterSearch">Search:</label>
+                            <input 
+                                type="text" 
+                                id="filterSearch" 
+                                placeholder="Search by name or course..."
+                            >
+                        </div>
+
+                        <button class="btn-secondary" onclick="resetFilters()">Reset Filters</button>
+                    </div>
+
+                    <!-- Quick Filter Buttons -->
+                    <div class="quick-filters">
+                        <button class="filter-btn active" data-filter="all">All Certificates</button>
+                        <button class="filter-btn" data-filter="valid">Valid Only</button>
+                        <button class="filter-btn" data-filter="expired">Expired Only</button>
+                    </div>
+
+                    <!-- Results Table -->
+                    <div class="results-table-container hidden" id="resultsTableContainer">
+                        <div class="table-wrapper">
+                            <table class="results-table">
+                                <thead>
+                                    <tr>
+                                        <th>Certificate #</th>
+                                        <th>Student Name</th>
+                                        <th>Course</th>
+                                        <th>Grade</th>
+                                        <th>Status</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="tableBody"></tbody>
+                            </table>
+                        </div>
+
+                        <!-- No Results Message -->
+                        <div id="noResults" class="no-results hidden">
+                            <p>No certificates found matching your filters.</p>
+                        </div>
+
+                        <!-- Pagination -->
+                        <div id="paginationContainer" class="pagination"></div>
                     </div>
                 </div>
             </section>
