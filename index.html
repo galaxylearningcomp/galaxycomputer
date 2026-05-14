@@ -3,27 +3,236 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Galaxy Learning Computer - Certificate Verification</title>
+    <title>Galaxy Learning Computer - Online Learning Platform</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
-        <header>
-            <div class="header-content">
-                <div class="header-title">
-                    <h1>🎓 Galaxy Learning Computer</h1>
-                    <p>Certificate Verification System</p>
-                </div>
+        <!-- NAVIGATION BAR -->
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">🎓 Galaxy Learning</div>
+                <ul class="nav-menu">
+                    <li><a href="#home" class="nav-link active">Home</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#courses" class="nav-link">Courses</a></li>
+                    <li><a href="#verify" class="nav-link">Verify</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
                 <button id="themeToggle" class="theme-toggle" title="Toggle Dark Mode">🌙</button>
+            </div>
+        </nav>
+
+        <!-- HEADER/HERO SECTION -->
+        <header id="home" class="hero">
+            <div class="hero-content">
+                <h1>Master Your Skills with Galaxy Learning Computer</h1>
+                <p>Comprehensive online courses designed to help you succeed in today's tech-driven world</p>
+                <button class="btn-primary btn-large" onclick="scrollToSection('courses')">Explore Courses</button>
+            </div>
+            <div class="hero-stats">
+                <div class="stat">
+                    <h3>5000+</h3>
+                    <p>Students</p>
+                </div>
+                <div class="stat">
+                    <h3>25+</h3>
+                    <p>Courses</p>
+                </div>
+                <div class="stat">
+                    <h3>95%</h3>
+                    <p>Success Rate</p>
+                </div>
             </div>
         </header>
 
         <main>
-            <!-- VERIFICATION SECTION -->
-            <section id="verificationSection" class="verification-section">
+            <!-- ABOUT SECTION -->
+            <section id="about" class="about-section">
+                <div class="section-container">
+                    <h2 class="section-title">About Us</h2>
+                    <div class="about-grid">
+                        <div class="about-content">
+                            <h3>Welcome to Galaxy Learning Computer</h3>
+                            <p>Galaxy Learning Computer is a leading online education platform dedicated to providing high-quality, affordable courses in computer science, programming, and digital skills. Our mission is to empower learners worldwide with practical knowledge and industry-relevant expertise.</p>
+                            <p>With expert instructors, hands-on projects, and certified programs, we help students and professionals achieve their career goals. Whether you're a beginner or advanced learner, we have the perfect course for you.</p>
+                            
+                            <div class="features-list">
+                                <div class="feature-item">
+                                    <span class="feature-icon">✓</span>
+                                    <div>
+                                        <h4>Expert Instructors</h4>
+                                        <p>Learn from industry professionals with years of experience</p>
+                                    </div>
+                                </div>
+                                <div class="feature-item">
+                                    <span class="feature-icon">✓</span>
+                                    <div>
+                                        <h4>Flexible Learning</h4>
+                                        <p>Study at your own pace, anytime, anywhere</p>
+                                    </div>
+                                </div>
+                                <div class="feature-item">
+                                    <span class="feature-icon">✓</span>
+                                    <div>
+                                        <h4>Certified Programs</h4>
+                                        <p>Earn recognized certifications upon completion</p>
+                                    </div>
+                                </div>
+                                <div class="feature-item">
+                                    <span class="feature-icon">✓</span>
+                                    <div>
+                                        <h4>24/7 Support</h4>
+                                        <p>Get help from our dedicated support team</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="about-image">
+                            <div class="placeholder-image">
+                                <div class="image-icon">📚</div>
+                                <p>Online Learning Platform</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- COURSES SECTION -->
+            <section id="courses" class="courses-section">
+                <div class="section-container">
+                    <h2 class="section-title">Our Courses</h2>
+                    <p class="section-subtitle">Choose from our wide range of high-quality courses</p>
+                    
+                    <div class="courses-grid">
+                        <!-- Course 1 -->
+                        <div class="course-card">
+                            <div class="course-header">
+                                <span class="course-icon">🐍</span>
+                                <span class="course-level">Intermediate</span>
+                            </div>
+                            <h3>Advanced Python Programming</h3>
+                            <p class="course-description">Master Python with focus on OOP, data structures, and web development</p>
+                            <div class="course-info">
+                                <span class="course-duration">🕐 12 Weeks</span>
+                                <span class="course-price">$199</span>
+                            </div>
+                            <div class="course-features">
+                                <p>✓ 40+ Video Lessons</p>
+                                <p>✓ Hands-on Projects</p>
+                                <p>✓ Certificate</p>
+                            </div>
+                            <button class="btn-enroll">Enroll Now</button>
+                        </div>
+
+                        <!-- Course 2 -->
+                        <div class="course-card">
+                            <div class="course-header">
+                                <span class="course-icon">🎨</span>
+                                <span class="course-level">Beginner</span>
+                            </div>
+                            <h3>Web Design Fundamentals</h3>
+                            <p class="course-description">Learn HTML, CSS, JavaScript and create stunning responsive websites</p>
+                            <div class="course-info">
+                                <span class="course-duration">🕐 8 Weeks</span>
+                                <span class="course-price">$149</span>
+                            </div>
+                            <div class="course-features">
+                                <p>✓ 30+ Video Lessons</p>
+                                <p>✓ Real Projects</p>
+                                <p>✓ Certificate</p>
+                            </div>
+                            <button class="btn-enroll">Enroll Now</button>
+                        </div>
+
+                        <!-- Course 3 -->
+                        <div class="course-card">
+                            <div class="course-header">
+                                <span class="course-icon">📊</span>
+                                <span class="course-level">Advanced</span>
+                            </div>
+                            <h3>Data Science & Machine Learning</h3>
+                            <p class="course-description">Explore ML algorithms, data analysis, and AI implementation</p>
+                            <div class="course-info">
+                                <span class="course-duration">🕐 16 Weeks</span>
+                                <span class="course-price">$299</span>
+                            </div>
+                            <div class="course-features">
+                                <p>✓ 50+ Video Lessons</p>
+                                <p>✓ Capstone Project</p>
+                                <p>✓ Certificate</p>
+                            </div>
+                            <button class="btn-enroll">Enroll Now</button>
+                        </div>
+
+                        <!-- Course 4 -->
+                        <div class="course-card">
+                            <div class="course-header">
+                                <span class="course-icon">☁️</span>
+                                <span class="course-level">Intermediate</span>
+                            </div>
+                            <h3>Cloud Computing with AWS</h3>
+                            <p class="course-description">Master AWS services and cloud architecture design</p>
+                            <div class="course-info">
+                                <span class="course-duration">🕐 10 Weeks</span>
+                                <span class="course-price">$249</span>
+                            </div>
+                            <div class="course-features">
+                                <p>✓ 35+ Video Lessons</p>
+                                <p>✓ Lab Exercises</p>
+                                <p>✓ Certificate</p>
+                            </div>
+                            <button class="btn-enroll">Enroll Now</button>
+                        </div>
+
+                        <!-- Course 5 -->
+                        <div class="course-card">
+                            <div class="course-header">
+                                <span class="course-icon">📱</span>
+                                <span class="course-level">Advanced</span>
+                            </div>
+                            <h3>Mobile App Development</h3>
+                            <p class="course-description">Build iOS and Android apps using React Native and Flutter</p>
+                            <div class="course-info">
+                                <span class="course-duration">🕐 14 Weeks</span>
+                                <span class="course-price">$279</span>
+                            </div>
+                            <div class="course-features">
+                                <p>✓ 45+ Video Lessons</p>
+                                <p>✓ Live Projects</p>
+                                <p>✓ Certificate</p>
+                            </div>
+                            <button class="btn-enroll">Enroll Now</button>
+                        </div>
+
+                        <!-- Course 6 -->
+                        <div class="course-card">
+                            <div class="course-header">
+                                <span class="course-icon">🔐</span>
+                                <span class="course-level">Intermediate</span>
+                            </div>
+                            <h3>Cybersecurity Essentials</h3>
+                            <p class="course-description">Learn network security, encryption, and threat prevention</p>
+                            <div class="course-info">
+                                <span class="course-duration">🕐 10 Weeks</span>
+                                <span class="course-price">$249</span>
+                            </div>
+                            <div class="course-features">
+                                <p>✓ 32+ Video Lessons</p>
+                                <p>✓ Security Labs</p>
+                                <p>✓ Certificate</p>
+                            </div>
+                            <button class="btn-enroll">Enroll Now</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- CERTIFICATE VERIFICATION SECTION -->
+            <section id="verify" class="verification-section">
                 <div class="card">
                     <h2>Verify Your Certificate</h2>
-                    <p class="subtitle">Enter your certificate number to view details</p>
+                    <p class="subtitle">Enter your certificate number to view details and authenticity</p>
                     
                     <form id="certificateForm">
                         <div class="form-group">
@@ -110,86 +319,78 @@
                 </div>
             </section>
 
-            <!-- BROWSE ALL CERTIFICATES SECTION -->
-            <section class="browse-section">
-                <div class="card">
-                    <h2>Browse All Certificates</h2>
-                    <p class="subtitle">Search, filter, and view all certificates</p>
+            <!-- CONTACT SECTION -->
+            <section id="contact" class="contact-section">
+                <div class="section-container">
+                    <h2 class="section-title">Get In Touch</h2>
+                    <p class="section-subtitle">Have questions? We'd love to hear from you</p>
                     
-                    <!-- Filter Controls -->
-                    <div class="filter-controls">
-                        <div class="filter-group">
-                            <label for="filterStatus">Status:</label>
-                            <select id="filterStatus">
-                                <option value="">All Status</option>
-                                <option value="valid">Valid</option>
-                                <option value="expired">Expired</option>
-                            </select>
+                    <div class="contact-grid">
+                        <div class="contact-info">
+                            <div class="contact-item">
+                                <div class="contact-icon">📧</div>
+                                <h4>Email</h4>
+                                <p>support@galaxylearning.com</p>
+                            </div>
+                            <div class="contact-item">
+                                <div class="contact-icon">📞</div>
+                                <h4>Phone</h4>
+                                <p>+91 1234-567-890</p>
+                            </div>
+                            <div class="contact-item">
+                                <div class="contact-icon">📍</div>
+                                <h4>Address</h4>
+                                <p>123 Learning Street<br>Tech City, TC 12345</p>
+                            </div>
                         </div>
 
-                        <div class="filter-group">
-                            <label for="filterCourse">Course:</label>
-                            <select id="filterCourse">
-                                <option value="">All Courses</option>
-                                <option value="Advanced Python Programming">Advanced Python Programming</option>
-                                <option value="Web Design Fundamentals">Web Design Fundamentals</option>
-                                <option value="Data Science & Machine Learning">Data Science & Machine Learning</option>
-                                <option value="Cloud Computing with AWS">Cloud Computing with AWS</option>
-                                <option value="Mobile App Development">Mobile App Development</option>
-                            </select>
-                        </div>
-
-                        <div class="filter-group">
-                            <label for="filterSearch">Search:</label>
-                            <input 
-                                type="text" 
-                                id="filterSearch" 
-                                placeholder="Search by name or course..."
-                            >
-                        </div>
-
-                        <button class="btn-secondary" onclick="resetFilters()">Reset Filters</button>
-                    </div>
-
-                    <!-- Quick Filter Buttons -->
-                    <div class="quick-filters">
-                        <button class="filter-btn active" data-filter="all">All Certificates</button>
-                        <button class="filter-btn" data-filter="valid">Valid Only</button>
-                        <button class="filter-btn" data-filter="expired">Expired Only</button>
-                    </div>
-
-                    <!-- Results Table -->
-                    <div class="results-table-container hidden" id="resultsTableContainer">
-                        <div class="table-wrapper">
-                            <table class="results-table">
-                                <thead>
-                                    <tr>
-                                        <th>Certificate #</th>
-                                        <th>Student Name</th>
-                                        <th>Course</th>
-                                        <th>Grade</th>
-                                        <th>Status</th>
-                                        <th>Action</th>
-                                    </tr>
-                                </thead>
-                                <tbody id="tableBody"></tbody>
-                            </table>
-                        </div>
-
-                        <!-- No Results Message -->
-                        <div id="noResults" class="no-results hidden">
-                            <p>No certificates found matching your filters.</p>
-                        </div>
-
-                        <!-- Pagination -->
-                        <div id="paginationContainer" class="pagination"></div>
+                        <form id="contactForm" class="contact-form">
+                            <div class="form-group">
+                                <input type="text" placeholder="Your Name" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" placeholder="Your Email" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" placeholder="Subject" required>
+                            </div>
+                            <div class="form-group">
+                                <textarea placeholder="Your Message" rows="5" required></textarea>
+                            </div>
+                            <button type="submit" class="btn-primary">Send Message</button>
+                        </form>
                     </div>
                 </div>
             </section>
         </main>
 
         <footer>
-            <p>&copy; 2026 Galaxy Learning Computer Institute. All rights reserved.</p>
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Galaxy Learning Computer</h4>
+                    <p>Empowering learners worldwide with quality education</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#courses">Courses</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#">Facebook</a>
+                        <a href="#">Twitter</a>
+                        <a href="#">LinkedIn</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Galaxy Learning Computer Institute. All rights reserved.</p>
+            </div>
         </footer>
     </div>
 
