@@ -8,6 +8,7 @@ const certificateDatabase = {
     'GLC-2024-001234': {
         studentName: 'Raj Kumar',
         course: 'Advanced Python Programming',
+        rollNumber: 'DCA-2024-001',
         issueDate: '2024-05-10',
         expiryDate: '2027-05-10',
         grade: 'A+',
@@ -17,17 +18,19 @@ const certificateDatabase = {
     },
     'GLC-2024-001235': {
         studentName: 'Aisha Patel',
-        course: 'Web Design Fundamentals',
+        course: 'Diploma in Computer Application',
+        rollNumber: 'DCA-2024-002',
         issueDate: '2023-03-15',
         expiryDate: '2024-03-15',
         grade: 'A',
-        description: 'Intensive training in HTML, CSS, JavaScript, and responsive web design principles.',
+        description: 'Intensive training in computer applications and modern software development.',
         verifiedBy: 'Mr. Vikram Singh',
         status: 'expired'
     },
     'GLC-2024-001236': {
         studentName: 'Vikram Desai',
         course: 'Data Science & Machine Learning',
+        rollNumber: 'DSC-2024-001',
         issueDate: '2024-02-20',
         expiryDate: '2027-02-20',
         grade: 'A',
@@ -38,6 +41,7 @@ const certificateDatabase = {
     'GLC-2024-001237': {
         studentName: 'Neha Gupta',
         course: 'Cloud Computing with AWS',
+        rollNumber: 'AWS-2024-001',
         issueDate: '2023-08-10',
         expiryDate: '2025-08-10',
         grade: 'B+',
@@ -47,12 +51,35 @@ const certificateDatabase = {
     },
     'GLC-2024-001238': {
         studentName: 'Arjun Malhotra',
-        course: 'Mobile App Development',
+        course: 'Advanced Python Programming',
+        rollNumber: 'PY-2024-001',
         issueDate: '2024-01-05',
         expiryDate: '2027-01-05',
         grade: 'A+',
-        description: 'Complete course in React Native and Flutter for iOS and Android app development.',
+        description: 'Complete course in Python programming with advanced OOP concepts and best practices.',
         verifiedBy: 'Ms. Sneha Desai',
+        status: 'valid'
+    },
+    'GLC-2024-001239': {
+        studentName: 'Shadab Khan',
+        course: 'Diploma in CCTV and Security',
+        rollNumber: 'CCTV-2024-001',
+        issueDate: '2024-03-01',
+        expiryDate: '2027-03-01',
+        grade: 'A+',
+        description: 'Expert training in closed-circuit television systems, surveillance technology, and modern security solutions.',
+        verifiedBy: 'Mr. Ahmed Hassan',
+        status: 'valid'
+    },
+    'GLC-2024-001240': {
+        studentName: 'Shadab Khan',
+        course: 'Certification in CAFM',
+        rollNumber: 'CAFM-2024-001',
+        issueDate: '2024-04-15',
+        expiryDate: '2027-04-15',
+        grade: 'A',
+        description: 'Professional certification in Computer-Aided Facility Management covering systems and best practices.',
+        verifiedBy: 'Dr. Fatima Khan',
         status: 'valid'
     }
 };
@@ -212,6 +239,7 @@ function displayCertificate(certNumber, certData) {
     document.getElementById('detailStudentName').textContent = certData.studentName;
     document.getElementById('certificateName').textContent = certData.studentName;
     document.getElementById('detailCourse').textContent = certData.course;
+    document.getElementById('detailRollNumber').textContent = certData.rollNumber;
     document.getElementById('detailIssueDate').textContent = formatDate(certData.issueDate);
     document.getElementById('detailExpiryDate').textContent = formatDate(certData.expiryDate);
     document.getElementById('detailGrade').textContent = certData.grade;
@@ -311,15 +339,15 @@ function downloadCertificatePDF() {
                     background: white;
                 }
                 .certificate {
-                    border: 3px solid #6366f1;
+                    border: 3px solid #0066cc;
                     padding: 40px;
                     text-align: center;
-                    background: linear-gradient(135deg, rgba(99, 102, 241, 0.02) 0%, rgba(139, 92, 246, 0.02) 100%);
+                    background: linear-gradient(135deg, rgba(0, 102, 204, 0.02) 0%, rgba(139, 92, 246, 0.02) 100%);
                 }
                 .header {
                     font-size: 32px;
                     font-weight: bold;
-                    color: #6366f1;
+                    color: #0066cc;
                     margin-bottom: 20px;
                 }
                 .cert-number {
@@ -349,7 +377,7 @@ function downloadCertificatePDF() {
                 }
                 .detail-label {
                     font-weight: bold;
-                    color: #6366f1;
+                    color: #0066cc;
                     width: 120px;
                     display: inline-block;
                 }
@@ -388,6 +416,10 @@ function downloadCertificatePDF() {
                 <div class="course">${cert.course}</div>
                 
                 <div class="details">
+                    <div class="detail-row">
+                        <span class="detail-label">Roll Number:</span>
+                        <span class="detail-value">${cert.rollNumber}</span>
+                    </div>
                     <div class="detail-row">
                         <span class="detail-label">Issue Date:</span>
                         <span class="detail-value">${formatDate(cert.issueDate)}</span>
