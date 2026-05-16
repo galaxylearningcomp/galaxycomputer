@@ -5,9 +5,9 @@
 
 :root {
     /* Light Mode Colors */
-    --primary-color: #6366f1;
-    --primary-dark: #4f46e5;
-    --primary-light: #818cf8;
+    --primary-color: #0066cc;
+    --primary-dark: #0052a3;
+    --primary-light: #3385d6;
     --secondary-color: #8b5cf6;
     --accent-color: #ec4899;
     --success-color: #10b981;
@@ -245,7 +245,7 @@ select:focus {
     outline: none;
     border-color: var(--primary-color);
     background-color: var(--bg-primary);
-    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+    box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.1);
 }
 
 .helper-text {
@@ -276,12 +276,12 @@ button {
     width: 100%;
     text-transform: uppercase;
     letter-spacing: 0.5px;
-    box-shadow: 0 4px 15px rgba(99, 102, 241, 0.3);
+    box-shadow: 0 4px 15px rgba(0, 102, 204, 0.3);
 }
 
 .btn-primary:hover {
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(99, 102, 241, 0.4);
+    box-shadow: 0 6px 20px rgba(0, 102, 204, 0.4);
 }
 
 .btn-primary:active {
